@@ -37,7 +37,7 @@ Looking for the old Hipster Shop frontend interface? Use the [manifests](https:/
 1. **[Create a Google Cloud Platform project](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project)** or use an existing project. Set the `PROJECT_ID` environment variable and ensure the Google Kubernetes Engine and Cloud Operations APIs are enabled.
 
 ```
-PROJECT_ID="<your-project-id>"
+PROJECT_ID="herukomigration"
 gcloud services enable container.googleapis.com --project ${PROJECT_ID}
 gcloud services enable monitoring.googleapis.com \
     cloudtrace.googleapis.com \
