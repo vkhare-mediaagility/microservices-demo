@@ -49,7 +49,7 @@ gcloud services enable monitoring.googleapis.com \
 2. **Clone this repository.**
 
 ```
-git clone https://github.com/GoogleCloudPlatform/microservices-demo.git
+git clone https://github.com/vkhare-mediaagility/microservices-demo.git
 cd microservices-demo
 ```
 
