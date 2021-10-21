@@ -30,7 +30,8 @@ steps:
   args:
   - '-c'
   - >
-    gcloud container clusters get-credentials --region us-central1 --project herukomigration onlineboutique ;
+    gcloud container clusters get-credentials --region us-central1 --project herukomigration onlineboutique;
+    skaffold version; 
     skaffold run -f=skaffold.yaml --default-repo=gcr.io/herukomigration;
 
 # Add more power, and more time, for heavy Skaffold build
