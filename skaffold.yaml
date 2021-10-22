@@ -46,6 +46,7 @@ build:
     context: src/adservice
   tagPolicy:
     gitCommit: {}
+    sha256: {}
   local:
     useBuildkit: false
 deploy:
