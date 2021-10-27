@@ -34,6 +34,7 @@ steps:
     skaffold version; 
     skaffold run -f=skaffold.yaml --default-repo=gcr.io/herukomigration;
     
+    echo "In the Root dir" > project.txt
     echo "$PROJECT_ID" > /workspace/PROJECT.txt
     echo "$BUILD_ID" > /persistent_volume/BUILD.txt
   volumes:
@@ -47,6 +48,7 @@ steps:
   - '-c'
   - >
     echo "";
+    cat project.txt
     cat /workspace/first.txt;
     echo "";
     cat /persistent_volume/BUILD.txt;
