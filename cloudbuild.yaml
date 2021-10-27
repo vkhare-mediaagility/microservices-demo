@@ -30,13 +30,13 @@ steps:
   args:
   - '-c'
   - >
-    gcloud container clusters get-credentials --region us-central1 --project herukomigration onlineboutique;
-    skaffold version; 
+    #gcloud container clusters get-credentials --region us-central1 --project herukomigration onlineboutique;
+    
     skaffold run -f=skaffold.yaml --default-repo=gcr.io/herukomigration;
     
     echo "In the Root dir" > project.txt
-    echo "$PROJECT_ID" > /workspace/PROJECT.txt
-    echo "$BUILD_ID" > /persistent_volume/BUILD.txt
+    echo "In workspace" > /workspace/PROJECT.txt
+    echo "in persistent volumne" > /persistent_volume/PROJ.txt
   volumes:
   - name: 'myvolume'
     path: '/persistent_volume'  
@@ -47,12 +47,13 @@ steps:
   args: 
   - '-c'
   - >
-    echo "";
+    echo "check1";
     cat project.txt
-    cat /workspace/first.txt;
-    echo "";
+    echo "check2";
+    cat /workspace/PROJECT.txt
+    echo "check3";
     cat /persistent_volume/BUILD.txt;
-    echo "";
+    echo "~~~~DONE~~~~";
   volumes:
   - name: 'myvolume'
     path: '/persistent_volume'  
