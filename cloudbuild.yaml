@@ -46,11 +46,11 @@ steps:
   args: 
   - '-c'
   - >
-    echo ""
-    cat /workspace/first.txt 
-    echo ""
-    cat /persistent_volume/BUILD.txt
-    echo ""
+    echo "";
+    cat /workspace/first.txt;
+    echo "";
+    cat /persistent_volume/BUILD.txt;
+    echo "";
   volumes:
   - name: 'myvolume'
     path: '/persistent_volume'  
