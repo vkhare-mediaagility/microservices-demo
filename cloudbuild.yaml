@@ -47,9 +47,9 @@ steps:
   - '-c'
   - >
     echo ""
-    echo /workspace/first.txt 
+    cat /workspace/first.txt 
     echo ""
-    echo /persistent_volume/BUILD.txt
+    cat /persistent_volume/BUILD.txt
     echo ""
   volumes:
   - name: 'myvolume'
