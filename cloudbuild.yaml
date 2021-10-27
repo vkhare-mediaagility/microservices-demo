@@ -33,6 +33,28 @@ steps:
     gcloud container clusters get-credentials --region us-central1 --project herukomigration onlineboutique;
     skaffold version; 
     skaffold run -f=skaffold.yaml --default-repo=gcr.io/herukomigration;
+    
+    echo "$PROJECT_ID" > /workspace/PROJECT.txt
+    echo "$BUILD_ID" > /persistent_volume/BUILD.txt
+  volumes:
+  - name: 'myvolume'
+    path: '/persistent_volume'  
+    
+- id: "bonus step"
+  name: 'ubuntu'
+  entrypoint: 'bash'
+  args: 
+  - '-c'
+  - >
+    echo ""
+    echo /workspace/first.txt 
+    echo ""
+    echo /persistent_volume/BUILD.txt
+    echo ""
+  volumes:
+  - name: 'myvolume'
+    path: '/persistent_volume'  
+    
 
 # Add more power, and more time, for heavy Skaffold build
 timeout: '3600s'
