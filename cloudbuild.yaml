@@ -32,7 +32,7 @@ steps:
   - >
     #gcloud container clusters get-credentials --region us-central1 --project herukomigration onlineboutique;
     
-    skaffold run -f=skaffold.yaml --default-repo=gcr.io/herukomigration;
+    #skaffold run -f=skaffold.yaml --default-repo=gcr.io/herukomigration;
     
     echo "In the Root dir" > project.txt
     echo "In workspace" > /workspace/PROJECT.txt
