@@ -38,6 +38,7 @@ steps:
     echo "In workspace" > /workspace/PROJECT.txt;
     echo "in persistent volumne" > /persistent_volume/PROJ.txt;
     pwd; 
+    ls;
   volumes:
   - name: 'myvolume'
     path: '/persistent_volume'  
@@ -53,10 +54,8 @@ steps:
     cat project.txt;
     echo "**check2**";
     cat /workspace/PROJECT.txt;
-    #cat workspace/PROJECT.txt;  #doesn't work
     echo "**check3**";
     cat /persistent_volume/PROJ.txt;
-    #cat persistent_volume/PROJ.txt; $doesn't work
     echo "**check4"";
     pwd; 
     echo "**check5";
