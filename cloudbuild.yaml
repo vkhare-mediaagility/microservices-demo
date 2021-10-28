@@ -59,7 +59,12 @@ steps:
     cat persistent_volume/PROJ.txt; $doesn't work
     echo "**check4"";
     pwd; 
+    echo "**check5";
+    du -sh /workspace
+    echo "**check6**"
+    du -sh /persistent_volume
     echo "~~~~DONE~~~~";
+    
     
   volumes:
   - name: 'myvolume'
