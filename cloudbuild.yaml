@@ -37,8 +37,7 @@ steps:
     echo "In the Root dir" > project.txt;
     echo "In workspace" > /workspace/PROJECT.txt;
     echo "in persistent volumne" > /persistent_volume/PROJ.txt;
-    pwd; 
-    ls;
+
   volumes:
   - name: 'myvolume'
     path: '/persistent_volume'  
@@ -60,8 +59,10 @@ steps:
     pwd; 
     echo "**check5";
     du -sh /workspace
+    df /workspace
     echo "**check6**"
     du -sh /persistent_volume
+    df /persistent_volume
     echo "~~~~DONE~~~~";
     
     
