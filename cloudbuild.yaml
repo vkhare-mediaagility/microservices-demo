@@ -53,10 +53,10 @@ steps:
     cat project.txt;
     echo "**check2**";
     cat /workspace/PROJECT.txt;
-    cat workspace/PROJECT.txt;  #doesn't work
+    #cat workspace/PROJECT.txt;  #doesn't work
     echo "**check3**";
     cat /persistent_volume/PROJ.txt;
-    cat persistent_volume/PROJ.txt; $doesn't work
+    #cat persistent_volume/PROJ.txt; $doesn't work
     echo "**check4"";
     pwd; 
     echo "**check5";
