@@ -47,11 +47,12 @@ steps:
   args: 
   - '-c'
   - >
-    echo "check1";
-    cat project.txt
-    echo "check2";
-    cat /workspace/PROJECT.txt
-    echo "check3";
+    echo "~~~~Starting Tests~~~~~"
+    echo "**check1**";
+    cat project.txt;
+    echo "**check2**";
+    cat /workspace/PROJECT.txt;
+    echo "**check3**";
     cat /persistent_volume/BUILD.txt;
     echo "~~~~DONE~~~~";
   volumes:
