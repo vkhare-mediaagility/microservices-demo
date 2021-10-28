@@ -34,9 +34,9 @@ steps:
     
     #skaffold run -f=skaffold.yaml --default-repo=gcr.io/herukomigration;
     
-    echo "In the Root dir" > project.txt
-    echo "In workspace" > /workspace/PROJECT.txt
-    echo "in persistent volumne" > /persistent_volume/PROJ.txt
+    echo "In the Root dir" > project.txt;
+    echo "In workspace" > /workspace/PROJECT.txt;
+    echo "in persistent volumne" > /persistent_volume/PROJ.txt;
   volumes:
   - name: 'myvolume'
     path: '/persistent_volume'  
@@ -52,8 +52,10 @@ steps:
     cat project.txt;
     echo "**check2**";
     cat /workspace/PROJECT.txt;
+    cat workspace/PROJECT.txt;
     echo "**check3**";
-    cat /persistent_volume/BUILD.txt;
+    cat /persistent_volume/PROJ.txt;
+    cat persistent_volume/PROJ.txt;
     echo "~~~~DONE~~~~";
   volumes:
   - name: 'myvolume'
